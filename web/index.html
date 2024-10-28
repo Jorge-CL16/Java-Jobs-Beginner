@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cotizador de fletes</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style/bootstrap/css/bootstrap-utilities.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="col-12">
+                <div class="card shadow-lg">
+                    <div class="card-header bg-primary text-white">
+                        <div class="text-center"><h1>Cotizador de fletes</h1></div>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-2">
+                                <label class="form-label">Punto de origen:</label>
+                            </div>
+                            <div class="col-5">
+                                <input class="form-control border border-primary border-3" id="txtX1" type="number" placeholder="x1"/>
+                            </div>
+                            <div class="col-5">
+                                <input class="form-control border border-primary border-3" id="txtY1" type="number" placeholder="y1"/>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-2">
+                                <label class="form-label">Punto de destino:</label>
+                            </div> 
+                            <div class="col-5">
+                                <input class="form-control border border-primary border-3" id="txtX2" type="number" placeholder="x2"/>
+                            </div> 
+                            <div class="col-5">
+                                <input class="form-control border border-primary border-3" id="txtY2" type="number" placeholder="y2"/>
+                            </div> 
+                        </div>
+                        <div class="row mt-4">
+                           <button type="button" class="btn btn-primary btn-sm" onclick="calcularCostoFlete()">Cotizar</button>     
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-12">
+                                <label class="form-label" for="txtDistancia">Distancia:</label>
+                                <input class="form-control border border-primary border-3" id="txtDistancia" type="text" placeholder="Distancia en UD´s" readonly=""/>
+                            </div>
+                        </div>   
+                        <div class="row mt-4">
+                            <div class="col-12">
+                                <label class="form-label" for="txtCosto">Costo:</label>
+                                <input class="form-control border border-primary border-3" id="txtCosto" type="text" placeholder="Costo en pesos" readonly=""/>
+                            </div>
+                        </div>  
+                        <div class="row mt-4">
+                            <div class="col-12">
+                                <div id="txtTamañoViaje" class="text-center"> 
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>          
+            </div>
+        </div>
+        <script src="style/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="js/calculadoraCotizaciones.js"></script>
+    </body>
+</html>
